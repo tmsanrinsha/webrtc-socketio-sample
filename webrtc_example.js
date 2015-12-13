@@ -11,13 +11,13 @@ console.log((new Date()) + " Server is listening on port " + port);
 // socket.ioサーバー --------------------------------------------------------------------------------------------
 
 io.sockets.on('connection', function(socket) {
-    console.log(' [socket] connection start.'+Object.keys(io.of("").manager.roomClients).length);
+    // console.log(' [socket] connection start.'+Object.keys(io.of("").manager.roomClients).length);
     socket.on('message', function(message) {
         socket.broadcast.emit('message', message);
     });
 
     socket.on('disconnect', function() {
-        console.log(' [socket] connection disconnect. client num-'+Object.keys(io.of("").manager.roomClients).length);
+        // console.log(' [socket] connection disconnect. client num-'+Object.keys(io.of("").manager.roomClients).length);
         socket.broadcast.emit('user disconnected');
     });
 
