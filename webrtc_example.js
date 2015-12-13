@@ -41,7 +41,7 @@ function load_static_file(uri, response) {
     var type = tmp[tmp.length - 1];
     var filename = path.join(process.cwd(), uri);
 
-    path.exists(filename, function(exists) {
+    fs.exists(filename, function(exists) {
         if (!exists) {
             response.writeHead(404, {'Content-Type': 'text/plain'});
             response.write('404 Not Found\n');
