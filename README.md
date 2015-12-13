@@ -8,18 +8,31 @@ Easy WebRTC sample. 2 file less than 300 lines code.
 
 Tested on 
 
-  Node.js v0.10.22  
-  Socket.IO v0.9.16  
-  Chrome 39.0.2171.71  
+*  Node.js v4.1.0
+*  Socket.IO v1.3.7
+*  Firefox 42.0
 
 ## Usage
 
-run  
+run
 
-`node webrtc_example.js`
+```sh
+$ node webrtc_example.js
+```
 
-  And access http://192.168.0.3:8080/webrtc_example.html  
-  192.168.0.3 is your local IP.  
+check your local IP
+
+```sh
+$ ifconfig
+:
+en0: **
+:
+        inet 192.168.0.2 netmask 0xffffff00 broadcast 192.168.0.255
+             ^^^^^^^^^^^
+```
+
+And access http://192.168.0.2:8080/webrtc_example.html  
+192.168.0.2 is your local IP.  
 
 ## Licence
 
